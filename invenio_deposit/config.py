@@ -50,9 +50,9 @@ DEPOSIT_REST_ENDPOINTS = dict(
         search_index='deposits',
         search_type=None,
         record_class='invenio_deposit.api:Deposit',
-        record_filter=lambda: Q(
-            'match', **{'_deposit.owner': current_user.get_id()}
-        ),
+        #record_filter=lambda: Q(
+        #    'match', **{'_deposit.owner': current_user.get_id()}
+        #),
         record_serializers={
             'application/json': ('invenio_records_rest.serializers'
                                  ':json_v1_response'),
